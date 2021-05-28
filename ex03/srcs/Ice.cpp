@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 12:39:20 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/28 14:13:50 by mroux            ###   ########.fr       */
+/*   Updated: 2021/05/28 15:29:53 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ Ice::Ice(Ice const& cl)
 Ice&		Ice::operator=(Ice const& cl)
 {
 	AMateria::operator=(cl);
+	return (*this);
 }
 
 AMateria*		Ice::clone() const

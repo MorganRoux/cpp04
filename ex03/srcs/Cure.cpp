@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 14:17:50 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/28 14:18:50 by mroux            ###   ########.fr       */
+/*   Updated: 2021/05/28 15:29:37 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ Cure::Cure(Cure const& cl)
 Cure&		Cure::operator=(Cure const& cl)
 {
 	AMateria::operator=(cl);
+	return (*this);
 }
 
 AMateria*		Cure::clone() const

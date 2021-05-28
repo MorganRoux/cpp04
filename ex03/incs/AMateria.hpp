@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 12:15:49 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/28 14:09:25 by mroux            ###   ########.fr       */
+/*   Updated: 2021/05/28 15:32:38 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <iostream>
 # include <string>
 # include "ICharacter.hpp"
+
+class ICharacter;
 
 class AMateria
 {
@@ -33,8 +35,8 @@ class AMateria
 	protected:
 		AMateria();
 		virtual void		useImpl(ICharacter &target);
-		unsigned int		_xp;
 		std::string			_type;
+		unsigned int		_xp;
 };
 
 std::ostream&	operator<<(std::ostream& stream, AMateria const& cl);

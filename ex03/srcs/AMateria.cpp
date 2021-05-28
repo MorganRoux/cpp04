@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 12:22:07 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/28 14:08:19 by mroux            ###   ########.fr       */
+/*   Updated: 2021/05/28 15:32:34 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,11 @@ void 				AMateria::use(ICharacter &target)
 {
 	_xp += 10;
 	useImpl(target);
+}
+
+void				AMateria::useImpl(ICharacter &target)
+{
+	(void)target;
 }
 
 std::string const& 	AMateria::getType() const
