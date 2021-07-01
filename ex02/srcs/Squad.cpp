@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 11:10:38 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/28 12:11:50 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/01 13:38:14 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,12 @@ Squad::Squad(Squad const& cl)
 Squad&	Squad::operator=(Squad const& cl)
 {
 	for (int i = 0; i < _count; i++)
-		delete &(_marines[i]);
+		delete (_marines[i]);
 	_count = cl.getCount();
 	_marines = new ISpaceMarine*[cl.getCount()];
 	for (int i = 0; i < _count; i++)
 		_marines[i] = cl.getUnit(i)->clone();
 	return (*this);
-}
-
-void		Squad::display(std::ostream& stream) const
-{
-	stream << "Hello" << std::endl;
 }
 
 int 			Squad::getCount() const
@@ -53,6 +48,8 @@ int 			Squad::getCount() const
 
 ISpaceMarine* 	Squad::getUnit(int i) const
 {
+	if (i >= _count)
+		throw std::exception();
 	return _marines[i];
 }
 
@@ -76,6 +73,6 @@ int 			Squad::push(ISpaceMarine* s)
 
 std::ostream&	operator<<(std::ostream& stream, Squad const& cl)
 {
-	cl.display(stream);
+	stream << "Hello Marines, we are " << cl.getCount() << " units today." << std::endl;
 	return (stream);
 }

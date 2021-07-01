@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 11:07:05 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/28 11:28:11 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/01 13:16:51 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class Squad : public ISquad
 		~Squad();
 		Squad(Squad const&);
 		Squad&			operator=(Squad const&);
-		void			display(std::ostream& stream) const;
 
 		int 			getCount() const;
 		ISpaceMarine* 	getUnit(int) const;
