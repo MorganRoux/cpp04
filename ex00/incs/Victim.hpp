@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 16:01:22 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/27 16:29:35 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/01 12:31:32 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Victim {
         ~Victim();
         Victim(Victim const& victim);
         Victim&     operator=(Victim const& victim);
-        void		display(std::ostream& stream) const;
+        std::string	getName() const;
 
         virtual void getPolymorphed() const;
 

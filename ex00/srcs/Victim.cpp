@@ -12,7 +12,7 @@
 
 #include "Victim.hpp"
 
-Victim::Victim(std::string name): 
+Victim::Victim(std::string name):
     _name(name)
 {
     std::cout << "Some random victim called " << _name << " just appeared!" << std::endl;
@@ -41,9 +41,9 @@ Victim&   Victim::operator=(Victim const& victim)
     return (*this);
 }
 
-void		Victim::display(std::ostream& stream) const
+std::string	Victim::getName() const
 {
-	stream << "I'm " << _name << " and I like otters!" << std::endl;
+	return (_name);
 }
 
 void        Victim::getPolymorphed() const
@@ -53,7 +53,7 @@ void        Victim::getPolymorphed() const
 
 std::ostream& operator<<(std::ostream& stream, Victim const& victim)
 {
-	victim.display(stream);
+	stream << "I'm " << victim.getName() << " and I like otters!" << std::endl;
 	return (stream);
 }
 

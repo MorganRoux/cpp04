@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 16:06:10 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/27 16:08:29 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/01 12:33:59 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main()
     Peon        p("Peon");
 
     std::cout << sc << v << p;
+	std::cout << sc.getName() <<  " - " << sc.getTitle() << v.getName() << p.getName() << std::endl;
     sc.polymorph(v);
     sc.polymorph(p);
 
