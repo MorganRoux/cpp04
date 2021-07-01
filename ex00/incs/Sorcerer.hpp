@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 16:01:22 by mroux             #+#    #+#             */
-/*   Updated: 2021/07/01 12:27:03 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/01 12:46:05 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ public:
 	Sorcerer(std::string name, std::string title);
 	~Sorcerer();
 	Sorcerer(Sorcerer const &sc);
-	Sorcerer &operator=(Sorcerer const &sc);
-	std::string getName() const;
-	std::string getTitle() const;
-	void polymorph(Victim const &) const;
+	Sorcerer 			&operator=(Sorcerer const &sc);
+	std::string const&	getName() const;
+	std::string const&	getTitle() const;
+	void 				polymorph(Victim const &) const;
 
 protected:
 	Sorcerer();

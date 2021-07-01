@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 16:03:13 by mroux             #+#    #+#             */
-/*   Updated: 2021/07/01 12:27:49 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/01 12:46:21 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,29 +35,29 @@ Sorcerer::Sorcerer(Sorcerer const& sc)
     operator=(sc);
 }
 
-Sorcerer&   Sorcerer::operator=(Sorcerer const& sc)
+Sorcerer&   		Sorcerer::operator=(Sorcerer const& sc)
 {
     _name = sc._name;
     _title = sc._title;
     return (*this);
 }
 
-std::string	Sorcerer::getName() const
+std::string const&	Sorcerer::getName() const
 {
 	return (_name);
 }
 
-std::string	Sorcerer::getTitle() const
+std::string const&	Sorcerer::getTitle() const
 {
 	return (_title);
 }
 
-void        Sorcerer::polymorph(Victim const& v) const
+void        		Sorcerer::polymorph(Victim const& v) const
 {
     v.getPolymorphed();
 }
 
-std::ostream& operator<<(std::ostream& stream, Sorcerer const& sc)
+std::ostream& 		operator<<(std::ostream& stream, Sorcerer const& sc)
 {
 	stream << "I'm " << sc.getName() << ", " << sc.getTitle() << " and I like ponies!" << std::endl;
 	return (stream);

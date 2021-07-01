@@ -41,7 +41,7 @@ Victim&   Victim::operator=(Victim const& victim)
     return (*this);
 }
 
-std::string	Victim::getName() const
+std::string const&	Victim::getName() const
 {
 	return (_name);
 }
