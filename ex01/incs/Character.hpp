@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 23:46:19 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/28 00:14:49 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/01 13:12:48 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,13 @@ class Character
 		~Character();
 		Character(Character const&);
 		Character&			operator=(Character const&);
-		void				display(std::ostream& stream) const;
 
+		std::string const&	getName() const;
+		int const&			getAP() const;
+		const AWeapon*		getWeapon() const;
 		void 				recoverAP();
         void 				equip(AWeapon*);
-        void 				attack(Enemy*);
-        std::string const&	getName() const;
+        void 				attack(Enemy*&);
 
 	protected:
 		Character();

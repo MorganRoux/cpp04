@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 23:56:26 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/28 00:16:04 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/01 13:12:58 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,9 @@ Character&			Character::operator=(Character const& cl)
 	return (*this);
 }
 
-void				Character::display(std::ostream& stream) const
-{
-	stream << _name << " has " << _ap << " AP and " << (_weapon == NULL ? "is unarmed." : "wields a " + _weapon->getName() + ".") << std::endl;
-}
-
 std::ostream&	operator<<(std::ostream& stream, Character const& cl)
 {
-	cl.display(stream);
+	stream << cl.getName() << " has " << cl.getAP() << " AP and " << (cl.getWeapon() == NULL ? "is unarmed." : "wields a " + cl.getWeapon()->getName() + ".") << std::endl;
 	return (stream);
 }
 
@@ -61,7 +56,7 @@ void 				Character::equip(AWeapon* w)
 	_weapon = w;
 }
 
-void 				Character::attack(Enemy* e)
+void 				Character::attack(Enemy*& e)
 {
 	if (_weapon == NULL || _ap < _weapon->getAPCost())
 		return;
@@ -70,10 +65,24 @@ void 				Character::attack(Enemy* e)
 	_weapon->attack();
 	e->takeDamage(_weapon->getDamage());
 	if (e->getHP() == 0)
+	{
 		delete e;
+		e = NULL;
+	}
 }
 
 std::string const&	Character::getName() const
 {
 	return _name;
+}
+
+
+int const&			Character::getAP() const
+{
+	return (_ap);
+}
+
+const AWeapon*		Character::getWeapon() const
+{
+	return (_weapon);
 }
