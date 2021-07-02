@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 14:26:22 by mroux             #+#    #+#             */
-/*   Updated: 2021/07/02 11:53:51 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 12:59:37 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Character : public ICharacter
 		void 				equip(AMateria* m);
 		void				unequip(int idx);
 		void				use(int idx, ICharacter& target);
+		AMateria const* 	getWeapon(int idx) const;
 
 	protected:
 		Character();
@@ -34,4 +35,6 @@ class Character : public ICharacter
 		AMateria*		_inventory[4];
 };
 
+
+std::ostream&	operator<<(std::ostream& stream, Character const& cl);
 #endif

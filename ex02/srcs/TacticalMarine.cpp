@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 11:50:40 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/28 12:10:20 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 12:51:30 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ TacticalMarine&	TacticalMarine::operator=(TacticalMarine const& cl)
 
 void		TacticalMarine::display(std::ostream& stream) const
 {
-	stream << "Hello" << std::endl;
+	stream << "Hello I'm TacticalMarine" << std::endl;
 }
 
 std::ostream&	operator<<(std::ostream& stream, TacticalMarine const& cl)

@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 11:57:46 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/28 12:10:30 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 12:51:20 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ AssaultTerminator&	AssaultTerminator::operator=(AssaultTerminator const& cl)
 
 void		AssaultTerminator::display(std::ostream& stream) const
 {
-	stream << "Hello" << std::endl;
+	stream << "Hello I'm AssaultTerminator" << std::endl;
 }
 
 std::ostream&	operator<<(std::ostream& stream, AssaultTerminator const& cl)

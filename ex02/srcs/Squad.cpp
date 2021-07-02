@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 11:10:38 by mroux             #+#    #+#             */
-/*   Updated: 2021/07/01 13:38:14 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 12:50:35 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,9 @@ int 			Squad::push(ISpaceMarine* s)
 
 std::ostream&	operator<<(std::ostream& stream, Squad const& cl)
 {
+	stream << "======" << std::endl;
 	stream << "Hello Marines, we are " << cl.getCount() << " units today." << std::endl;
+	for (int i = 0; i < cl.getCount(); i++)
+		stream << cl.getUnit(i) << std::endl;
 	return (stream);
 }

@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 14:29:13 by mroux             #+#    #+#             */
-/*   Updated: 2021/07/02 09:34:35 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 13:28:21 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,4 +100,25 @@ void				Character::use(int idx, ICharacter &target)
 	if (idx < 0 || idx > 3 || _inventory[idx] == NULL)
 		return;
 	_inventory[idx]->use(target);
+}
+
+AMateria const* 	Character::getWeapon(int idx) const
+{
+	return _inventory[idx];
+}
+
+std::ostream&	operator<<(std::ostream& stream, Character const& cl)
+{
+	// stream << cl.getName() << std::endl;
+	stream << "I'm " << cl.getName() << " and here is my weapons :" << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		AMateria const* w = cl.getWeapon(i);
+		stream << "Weapon " << i << " : ";
+		if (w == NULL)
+			stream << "Empty" << std::endl;
+		else
+			stream << w->getType() << " - " << w->getXP() << " points" << std::endl;
+	}
+	return stream;
 }
