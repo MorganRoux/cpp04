@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 23:21:14 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/27 23:22:02 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 11:52:02 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class PowerFist : public AWeapon
 {
 	public:
 		PowerFist();
-		~PowerFist();
+		virtual ~PowerFist();
 		PowerFist(PowerFist const&);
 		PowerFist&	operator=(PowerFist const&);
 		void			attack() const;

@@ -3,7 +3,8 @@ NAME		=	ex00
 SRCS		=	srcs/main.cpp \
 				srcs/Sorcerer.cpp \
 				srcs/Victim.cpp \
-				srcs/Peon.cpp
+				srcs/Peon.cpp \
+				srcs/Other.cpp
 
 OBJS		=	$(SRCS:.cpp=.o)
 CC			=	clang++

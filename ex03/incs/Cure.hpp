@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 14:17:12 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/28 14:17:35 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 11:53:52 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Cure : public AMateria
 {
 	public:
 		Cure();
-		~Cure();
+		virtual ~Cure();
 		Cure(Cure const&);
 
 		Cure&		operator=(Cure const&);

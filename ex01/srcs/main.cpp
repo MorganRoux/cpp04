@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 22:29:29 by mroux             #+#    #+#             */
-/*   Updated: 2021/07/01 13:14:05 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 12:29:05 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include "Character.hpp"
 #include "RadScorpion.hpp"
 #include "SuperMutant.hpp"
+#include "BigWeapon.hpp"
+#include "BadVilain.hpp"
 
 int main()
 {
@@ -24,19 +26,23 @@ int main()
 	std::cout << *me;
 	Enemy *b = new RadScorpion();
 	Enemy *c = new SuperMutant();
+	Enemy *d = new BadVilain();
 	AWeapon *pr = new PlasmaRifle();
 	AWeapon *pf = new PowerFist();
+	AWeapon *bw = new BigWeapon();
+
 	me->equip(pr);
 	std::cout << *me;
 	me->equip(pf);
 	me->attack(b);
 	me->attack(c);
 	std::cout << *me;
-	me->equip(pr);
+	me->equip(bw);
 	std::cout << *me;
 	me->attack(b);
 	std::cout << *me;
 	me->attack(b);
+	me->attack(d);
 	std::cout << *me;
 	std::cout << "===" << std::endl;
 	delete me;

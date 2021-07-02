@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 11:48:35 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/28 11:57:14 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 11:52:34 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class TacticalMarine : public ISpaceMarine
 {
 	public:
 		TacticalMarine();
-		~TacticalMarine();
+		virtual ~TacticalMarine();
 		TacticalMarine(TacticalMarine const&);
 		TacticalMarine&	operator=(TacticalMarine const&);
 		void			display(std::ostream& stream) const;

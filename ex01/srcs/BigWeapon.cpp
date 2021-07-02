@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   BigWeapon.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 16:06:10 by mroux             #+#    #+#             */
-/*   Updated: 2021/07/02 11:56:11 by mroux            ###   ########.fr       */
+/*   Created: 2021/05/27 23:09:31 by mroux             #+#    #+#             */
+/*   Updated: 2021/07/02 11:58:19 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sorcerer.hpp"
-#include "Victim.hpp"
-#include "Peon.hpp"
-#include "Other.hpp"
+#include "BigWeapon.hpp"
 
-int main()
+BigWeapon::BigWeapon(): AWeapon("Big Weapon", 21, 5)
 {
-    Sorcerer    sc("Me", "King");
-    Victim      v("Vic");
-    Peon        p("Peon");
-	Other		o("Other");
+}
 
-    std::cout << sc << v << p << o;
-	std::cout << sc.getName() <<  " - " << sc.getTitle() << v.getName() << p.getName() << std::endl;
-    sc.polymorph(v);
-    sc.polymorph(p);
-	sc.polymorph(o);
+BigWeapon::~BigWeapon()
+{
+}
 
+BigWeapon::BigWeapon(BigWeapon const& cl)
+{
+	operator=(cl);
+}
+
+BigWeapon&	BigWeapon::operator=(BigWeapon const& cl)
+{
+	AWeapon::operator=(cl);
+	return (*this);
+}
+
+void			BigWeapon::attack() const
+{
+	std::cout << "* blaaa blaaa brrraaaa *" << std::endl;
 }

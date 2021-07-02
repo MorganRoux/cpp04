@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 11:59:08 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/28 12:01:02 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 11:52:16 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class AssaultTerminator : public ISpaceMarine
 {
 	public:
 		AssaultTerminator();
-		~AssaultTerminator();
+		virtual ~AssaultTerminator();
 		AssaultTerminator(AssaultTerminator const&);
 		AssaultTerminator&	operator=(AssaultTerminator const&);
 		void			display(std::ostream& stream) const;

@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Victim.hpp                                         :+:      :+:    :+:   */
+/*   Other.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 16:01:22 by mroux             #+#    #+#             */
-/*   Updated: 2021/07/02 11:51:18 by mroux            ###   ########.fr       */
+/*   Created: 2021/07/02 11:56:45 by mroux             #+#    #+#             */
+/*   Updated: 2021/07/02 11:56:46 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VICTIM_HPP
-# define VICTIM_HPP
+#ifndef OTHER_HPP
+# define OTHER_HPP
 # include <iostream>
 # include <string>
+# include "Victim.hpp"
 
-
-class Victim {
+class Other : public Victim
+{
     public:
-        Victim(std::string name);
-        virtual ~Victim();
-        Victim(Victim const& victim);
-        Victim&     operator=(Victim const& victim);
-        std::string const&	getName() const;
+        Other(std::string name);
+        virtual ~Other();
+        Other(Other const& peon);
 
-        virtual void getPolymorphed() const;
+        void getPolymorphed() const;
 
     protected:
-        Victim();
-        std::string     _name;
+        Other();
 };
-
-std::ostream& operator<<(std::ostream& stream, Victim const& victim);
 
 #endif

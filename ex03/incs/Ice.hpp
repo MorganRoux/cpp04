@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 12:36:08 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/28 14:13:40 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 11:53:53 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Ice : public AMateria
 {
 	public:
 		Ice();
-		~Ice();
+		virtual ~Ice();
 		Ice(Ice const&);
 
 		Ice&		operator=(Ice const&);

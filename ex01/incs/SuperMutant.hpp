@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 23:35:37 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/27 23:42:20 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 11:52:22 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class SuperMutant : public Enemy
 {
 	public:
 		SuperMutant();
-		~SuperMutant();
+		virtual ~SuperMutant();
 		SuperMutant(SuperMutant const&);
 		SuperMutant&	operator=(SuperMutant const&);
 		void 			takeDamage(int);

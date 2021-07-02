@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RadScorpions.hpp                                   :+:      :+:    :+:   */
+/*   RadScorpion.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 23:43:36 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/27 23:45:35 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 11:52:11 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class RadScorpion : public Enemy
 {
 	public:
 		RadScorpion();
-		~RadScorpion();
+		virtual ~RadScorpion();
 		RadScorpion(RadScorpion const&);
 		RadScorpion&	operator=(RadScorpion const&);
 

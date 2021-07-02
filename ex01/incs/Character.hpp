@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 23:46:19 by mroux             #+#    #+#             */
-/*   Updated: 2021/07/01 13:12:48 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 11:51:46 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Character
 {
 	public:
 		Character(std::string const& name);
-		~Character();
+		virtual ~Character();
 		Character(Character const&);
 		Character&			operator=(Character const&);
 

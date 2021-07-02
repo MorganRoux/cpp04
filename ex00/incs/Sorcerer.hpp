@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 16:01:22 by mroux             #+#    #+#             */
-/*   Updated: 2021/07/01 12:46:05 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 11:51:33 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Sorcerer
 {
 public:
 	Sorcerer(std::string name, std::string title);
-	~Sorcerer();
+	virtual ~Sorcerer();
 	Sorcerer(Sorcerer const &sc);
 	Sorcerer 			&operator=(Sorcerer const &sc);
 	std::string const&	getName() const;

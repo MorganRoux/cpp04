@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 14:52:07 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/28 15:08:44 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 11:53:53 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class MateriaSource : public IMateriaSource
 {
 	public:
 		MateriaSource();
-		~MateriaSource();
+		virtual ~MateriaSource();
 		MateriaSource(MateriaSource const&);
 		MateriaSource&		operator=(MateriaSource const&);
 		void				display(std::ostream& stream) const;

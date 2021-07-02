@@ -4,9 +4,11 @@ SRCS		=	srcs/main.cpp \
 				srcs/AWeapon.cpp \
 				srcs/PlasmaRifle.cpp \
 				srcs/PowerFist.cpp \
+				srcs/BigWeapon.cpp \
 				srcs/Enemy.cpp \
 				srcs/SuperMutant.cpp \
 				srcs/RadScorpion.cpp \
+				srcs/BadVilain.cpp \
 				srcs/Character.cpp
 
 OBJS		=	$(SRCS:.cpp=.o)

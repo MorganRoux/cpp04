@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Victim.hpp                                         :+:      :+:    :+:   */
+/*   BigWeapon.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 16:01:22 by mroux             #+#    #+#             */
-/*   Updated: 2021/07/02 11:51:18 by mroux            ###   ########.fr       */
+/*   Created: 2021/05/27 22:58:03 by mroux             #+#    #+#             */
+/*   Updated: 2021/07/02 11:57:27 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VICTIM_HPP
-# define VICTIM_HPP
+#ifndef BIGWEAPON_HPP
+# define BIGWEAPON_HPP
 # include <iostream>
 # include <string>
+# include "AWeapon.hpp"
 
+class BigWeapon : public AWeapon
+{
+	public:
+		BigWeapon();
+		virtual ~BigWeapon();
+		BigWeapon(BigWeapon const&);
+		BigWeapon&	operator=(BigWeapon const&);
+		void			attack() const;
 
-class Victim {
-    public:
-        Victim(std::string name);
-        virtual ~Victim();
-        Victim(Victim const& victim);
-        Victim&     operator=(Victim const& victim);
-        std::string const&	getName() const;
-
-        virtual void getPolymorphed() const;
-
-    protected:
-        Victim();
-        std::string     _name;
+	protected:
 };
-
-std::ostream& operator<<(std::ostream& stream, Victim const& victim);
 
 #endif
