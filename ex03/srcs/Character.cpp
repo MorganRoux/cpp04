@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 14:29:13 by mroux             #+#    #+#             */
-/*   Updated: 2021/05/28 15:50:26 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/02 09:34:35 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,11 @@ std::string const&	Character::getName() const
 
 void				Character::equip(AMateria *m)
 {
+	int i;
+
 	if (m == NULL)
 		return;
-	for (int i = 0; i < 4; i++)
+	for (i = 0; i < 4; i++)
 	{
 		if (_inventory[i] == NULL)
 		{
@@ -82,6 +84,8 @@ void				Character::equip(AMateria *m)
 			break;
 		}
 	}
+	if (i == 4)
+		std::cout << _name << " equipement is full" << std::endl;
 }
 
 void				Character::unequip(int idx)
